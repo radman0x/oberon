@@ -18,6 +18,14 @@ project "basic_1"
     linkoptions { "-static -pthread" }
     buildoptions { "-std=c++11" }
 
+    links       { "boost_chrono",
+                  "boost_date_time",
+                  "boost_filesystem",
+                  "boost_regex",
+                  "boost_program_options",
+                  "boost_system" }
+
+
   configuration "Debug"
        defines { "DEBUG" }
        flags { "Symbols" }
