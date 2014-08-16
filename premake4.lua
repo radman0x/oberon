@@ -12,24 +12,27 @@ project "oberon"
     libdirs { "boost/stage/lib" }
               
     includedirs { "boost", "." }
- 
-    links { "boost_chrono",
-            "boost_date_time", 
-            "boost_filesystem", 
-            "boost_program_options", 
-            "boost_system" }
+     
+    targetdir( "builds/oberon")
 
-    buildoptions { "-std=c++11" }
- 
     configuration "Debug"
-         targetdir( "builds/oberon")
-         defines { "DEBUG" }
-         flags { "Symbols" }
-         
+        defines { "DEBUG" }
+        flags { "Symbols" }
+
     configuration "Release"
-         targetdir ("builds/oberon")
-         defines { "NDEBUG" }
-         flags { "Optimize" }
+        defines { "NDEBUG" }
+        flags { "Optimize" }
+
+    configuration "gmake"
+         buildoptions { "-std=c++11" }
+
+         links { "boost_chrono",
+                 "boost_date_time", 
+                 "boost_filesystem", 
+                 "boost_program_options", 
+                 "boost_system" }
+                 
+    -- boost auto-linking takes care of our links specification on windows
 
 -----------------------------------------------------------------------------------------------------------------------
 

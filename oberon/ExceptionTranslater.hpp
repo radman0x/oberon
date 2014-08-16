@@ -66,7 +66,7 @@ namespace oberon
     {
       throw CommandLineParsingError("Unknown option " + e.get_option_name() + " specified", subcommandName);
     }
-    catch (boost::program_options::too_many_positional_options_error& e)
+    catch (boost::program_options::too_many_positional_options_error&)
     {
       throw CommandLineParsingError("Too many positional options specified", subcommandName);
     }

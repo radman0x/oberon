@@ -50,7 +50,7 @@ namespace basic
     BaseRandomNumberGenerator generator;
 
     boost::variate_generator<BaseRandomNumberGenerator&,UniformDist> numberGenerator(generator, distribution);
-    generator.seed( time(NULL) );
+    generator.seed( static_cast<uint32_t>(time(nullptr)) );
 
     return randomSet[ numberGenerator() ];
   }

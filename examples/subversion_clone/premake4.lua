@@ -5,30 +5,25 @@ project "subversion_clone"
   kind "ConsoleApp"
 
   files { "*.cpp", "*.hpp" }
-  libdirs { "../../boost/stage/lib" }
 
+  libdirs { "../../boost/stage/lib" }
   includedirs { "../../boost", "../../" }
 
-  links { "oberon",
-          "boost_chrono",
-          "boost_date_time",
-          "boost_filesystem",
-          "boost_regex",
-          "boost_program_options",
-          "boost_system" }
+  links { "oberon" }
 
-  buildoptions { "-std=c++11" }
-  linkoptions { "-static -pthread" }
+  targetdir( "../../builds/subversion_clone")
+
+  configuration { "gmake" }
+    linkoptions { "-static -pthread" }
+    buildoptions { "-std=c++11" }
 
   configuration "Debug"
-       targetdir( "../../builds/subversion_clone")
        defines { "DEBUG" }
        flags { "Symbols" }
 
   configuration "Release"
-       targetdir ("../../builds/subversion_clone")
-       defines { "NDEBUG" }
-       flags { "Optimize" }
+      defines { "NDEBUG" }
+      flags { "Optimize" }
 
 
 -----------------------------------------------------------------------------------------------------------------------
