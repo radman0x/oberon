@@ -4,7 +4,7 @@
 
 Subcommands are an effective way of making a complex command line application easier to use. The essential idea is that the high level capabilities of the application are separated, each having their own distinct options and focussed purpose. Once an application reaches a certain amount of complexity it becomes exceedingly difficult to use without this separation.  Probably the most well known application to utilise this technique is Subversion (svn).
 
-Oberon is built on top of Boost.Program_options, is available under the same MIT license as boost and is written in modern C++. I named it Oberon after a type of __sub__marine.
+Oberon is built on top of Boost.Program_options, is available under the Apache 2.0 license and is written in modern C++. I named it Oberon after a type of __sub__marine.
 
 ### Version ###
 
