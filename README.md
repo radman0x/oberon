@@ -1,5 +1,3 @@
-
-
 # README #
 
 ## Oberon - A Subcommand Program Options Library ##
@@ -10,7 +8,6 @@ Oberon is built on top of Boost.Program_options, is available under the same MIT
 
 ### Version ###
 
-
 #### 0.7.0 ####
 
 * First released version
@@ -18,9 +15,9 @@ Oberon is built on top of Boost.Program_options, is available under the same MIT
 
 ## How to build? ##
 
-Building of Oberon should be straightforward as it has only 1 external dependency and there are no complicated configuration steps. In order to build you will need to have a copy of [boost](http://www.boost.org) and I would recommend 1.55.0, although I would expect it to work with others. 
+Building of Oberon should be straightforward as it has only 1 external dependency and there are no complicated configuration steps. In order to build you will need to have a copy of [boost](http://www.boost.org) and I would recommend 1.55.0 or 1.56.0, although I would expect it to work with others too. 
 
-Generally when integrating a library into a project you already have a build tool that is being leveraged; make, cmake, premake, VisualStudio etc. If you are in this position then all you need to do is add the Oberon source code to your project and link and include the boost libraries through the mechanisms your build system provides. With this said I have included [premake](http://industriousone.com/what-premake) build files for easy building of the example code. To use it you will need to [download it](http://sourceforge.net/projects/premake/). See the wiki for further details... !need a link here!
+Generally when integrating a library into a project you already have a build tool that is being leveraged; make, cmake, premake, VisualStudio etc. If you are in this position then all you need to do is add the Oberon source code to your project and link and include the boost libraries through the mechanisms your build system provides. With this said I have included [Premake](http://industriousone.com/what-premake) build files for easy building of the example code. To use it you will need to [download it](http://sourceforge.net/projects/premake/). Please see [the wiki](https://bitbucket.org/radman/oberon/wiki/Home) for more detailed information.
 
 ## Contribution guidelines ##
 
