@@ -29,5 +29,5 @@ There are a few sources of information available for Oberon:
 
 + [The Issue Tracker](https://bitbucket.org/radman/oberon/issues?status=new&status=open)
 + [The Wiki](https://bitbucket.org/radman/oberon/wiki/Home)
-+ [www.radmangames.com](http://www.radmangames.com/oberon)
++ [www.radmangames.com/oberon](http://www.radmangames.com/oberon)
 + email: radman\[at\]radmangames.com
