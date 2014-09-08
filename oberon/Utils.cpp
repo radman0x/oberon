@@ -35,7 +35,7 @@ namespace oberon {
     bool unlimitedOptionInPositionals = positionalOptions.max_total_count() == std::numeric_limits<unsigned>::max();
     if ( unlimitedOptionInPositionals )
     {
-      std::string lastName = positionalOptions.name_for_position( std::numeric_limits<unsigned>::max() );
+      std::string lastName = positionalOptions.name_for_position( std::numeric_limits<unsigned>::max() - 1);
       for ( /* */ ; lastName != positionalOptions.name_for_position(count); ++count)
       {
         // the loop itself increments count which is all that is desired
