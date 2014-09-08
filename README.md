@@ -10,7 +10,7 @@ Oberon is built on top of Boost.Program_options, is available under the permissi
 
 #### 0.7.1 ####
 
-* Fix for utility method and unlimited positional option parsing. Thanks to mwijngaard.
+* Fix for utility method to do with unlimited positional option parsing. Thanks to mwijngaard.
 
 #### 0.7.0 ####
 
