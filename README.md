@@ -8,6 +8,10 @@ Oberon is built on top of Boost.Program_options, is available under the permissi
 
 ### Version ###
 
+#### 0.7.2 ####
+
+* Adjustment to ExceptionTranslater to correctly return boost::none for a boost::optional instead of nullptr, required for boost 1.58 compatibility. Thanks to mwijngaard.
+
 #### 0.7.1 ####
 
 * Fix for utility method to do with unlimited positional option parsing. Thanks to mwijngaard.
