@@ -1,0 +1,44 @@
+
+Library
+{
+  name = "oberon",
+
+  auto_sources = { "oberon/*.cpp" },
+  auto_headers = { "oberon/*.hpp" },
+  
+  include_dirs = { "." } ,
+
+  depends = { "vendor_boost" }
+
+}
+
+Executable
+{
+  name = "oberon_basic_1",
+
+  auto_sources = { "examples/basic_1/*.cpp" },
+  auto_headers = { "examples/basic_1/*.hpp" },
+
+  depends = { "oberon" }
+}
+
+Executable
+{
+  name = "oberon_basic_2",
+
+  auto_sources = { "examples/basic_2/*.cpp" },
+  auto_headers = { "examples/basic_2/*.hpp" },
+
+  depends = { "oberon" }
+}
+
+Executable
+{
+  name = "oberon_subversion_clone",
+
+  auto_sources = { "examples/subversion_clone/*.cpp" },
+  auto_headers = { "examples/subversion_clone/*.hpp" },
+
+  depends = { "oberon" }
+}
+
