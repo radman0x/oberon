@@ -16,6 +16,22 @@ namespace
 
 } // namespace
 
+namespace std
+{
+  std::ostream& operator<<(std::ostream& out, const std::vector<std::string>& sv)
+  {
+    auto first = true;
+    for (const auto& s : sv)
+    {
+      out << first ? " " + s : s;
+      first = false;
+    }
+    return out;
+
+  }
+
+} // namespace
+
 namespace oberon {
 
 //----------------------------------------------------------------------------------------------------------------------
@@ -34,8 +50,8 @@ namespace oberon {
     if ( includeHidden )
     {
       returnOptions.add_options()
-        ("topic", getOptionValue<std::vector<std::string> >(enableRestrictions), "Topic to display help for, can be "
-                                                                                 "specified multiple times");
+        ("topic", getOptionValue<std::vector<std::string>>(enableRestrictions), "Topic to display help for, can be "
+                                                                                "specified multiple times");
     }
 
     return returnOptions;

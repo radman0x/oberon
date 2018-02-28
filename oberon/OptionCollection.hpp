@@ -8,8 +8,7 @@
 **                                                          2013                                                      **
 ***********************************************************************************************************************/
 
-#ifndef RAD_OPTIONCOLLECTION_HPP
-#define RAD_OPTIONCOLLECTION_HPP
+#pragma once
 
 #include "GenericFactory.hpp"
 
@@ -60,10 +59,10 @@ namespace oberon {
     bool exists(const std::string& name) const;
 
   private: // types
-    typedef boost::shared_ptr<boost::program_options::option_description>                 OptionPtr;
-    typedef GenericFactory<OptionPtr, std::string, std::function<OptionPtr(bool)> >       OptionFactory;
+    typedef boost::shared_ptr<boost::program_options::option_description>           OptionPtr;
+    typedef GenericFactory<OptionPtr, std::string, std::function<OptionPtr(bool)> > OptionFactory;
 
-    typedef std::function<boost::program_options::value_semantic*(bool)>                  ValueSemanticCreator;
+    typedef std::function<boost::program_options::value_semantic*(bool)>            ValueSemanticCreator;
 
   private: // methods
     /** Private method for registering factory methods, contains complexity so the public interface doesn't have to.
@@ -118,5 +117,3 @@ namespace oberon {
   }
 
 } // namespace
-
-#endif // RAD_OPTIONCOLLECTION_HPP

@@ -14,6 +14,7 @@
 #include "OptionCollection.hpp"
 
 #include "boost/program_options.hpp"
+#include "boost/optional.hpp"
 
 #include <vector>
 #include <string>
@@ -26,7 +27,8 @@ namespace oberon
    *
    * The interface for a subcommand is focussed on allowing a client to retrieve options based on different criteria so
    * they can be used selectively for parsing a command line, displaying usage information or for other purposes.
-   * Derived classes
+   *
+   * Option Types
    *
    * Shared:  Because it is assumed that a subcommand will be used alongside others and that they may share some options
    *          in common.
@@ -117,12 +119,17 @@ namespace oberon
      * Used when optionally applying restrictions to an option based upon a bool flag
      */
     template <typename T_OptionValueType>
-    static boost::program_options::typed_value<T_OptionValueType>* getOptionValue(bool required=false)
+    static boost::program_options::typed_value<T_OptionValueType>* getOptionValue(bool required=false,
+                                                                                  const boost::optional<T_OptionValueType>& implicitValue=boost::none)
     {
       boost::program_options::typed_value<T_OptionValueType>* val = boost::program_options::value<T_OptionValueType>();
       if ( required )
       {
         val->required();
+      }
+      if ( implicitValue )
+      {
+        val->implicit_value(implicitValue.get());
       }
 
       return val;
